@@ -256,8 +256,9 @@ public class UserController {
             return false;
 
         //Check User Authorization for Current Exam
-        if(userExamRepository.findById(session_user_id).isEmpty())
+        if(userExamRepository.findById(session_user_id).isEmpty()) {
             return false;
+        }
 
         return true;
     }
